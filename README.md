@@ -13,9 +13,11 @@ Datasets are given in the `corpus` directory and models in the `models` director
 
 ## Installation
 
+Install the required python librairies:
+
 	pip3 install -r requirements.txt
 
-You need first to download the binary file of the pretrained French [FastText model](https://dl.fbaipublicfiles.com/fasttext/vectors-crawl/cc.fr.300.bin.gz) (4.2 Go) and add it to the `data` directory:
+Then you need to download the binary file of the pretrained French [FastText model](https://dl.fbaipublicfiles.com/fasttext/vectors-crawl/cc.fr.300.bin.gz) (4.2 Go) and add it to the `data` directory:
 
 	wget -P data https://dl.fbaipublicfiles.com/fasttext/vectors-crawl/cc.fr.300.bin.gz
 	gzip -d data/cc.fr.300.bin.gz
