@@ -23,7 +23,7 @@ Then you need to download the binary file of the pretrained French [FastText mod
 	gzip -d data/cc.fr.300.bin.gz
 
 
-[TreeTagger](https://cis.uni-muenchen.de/~schmid/tools/TreeTagger/) needs also to be installed before running the script:
+[TreeTagger](https://cis.uni-muenchen.de/~schmid/tools/TreeTagger/) needs also to be installed with the French parameter file before running the script:
 	
 	mkdir TreeTagger
 	cd TreeTagger
