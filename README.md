@@ -13,12 +13,34 @@ Datasets are given in the `corpus` directory and models in the `models` director
 
 ## Installation
 
+Install the required python librairies:
+
 	pip3 install -r requirements.txt
 
-You need first to download the binary file of the pretrained French [FastText model](https://dl.fbaipublicfiles.com/fasttext/vectors-crawl/cc.fr.300.bin.gz) and add it to the `data` directory:
+Then you need to download the binary file of the pretrained French [FastText model](https://dl.fbaipublicfiles.com/fasttext/vectors-crawl/cc.fr.300.bin.gz) (4.2 Go) and add it to the `data` directory:
 
 	wget -P data https://dl.fbaipublicfiles.com/fasttext/vectors-crawl/cc.fr.300.bin.gz
 	gzip -d data/cc.fr.300.bin.gz
+
+
+[TreeTagger](https://cis.uni-muenchen.de/~schmid/tools/TreeTagger/) needs also to be installed with the French parameter file before running the script:
+	
+	mkdir TreeTagger
+	cd TreeTagger
+	
+	wget https://cis.uni-muenchen.de/~schmid/tools/TreeTagger/data/tree-tagger-linux-3.2.3.tar.gz
+	tar -xzf tree-tagger-linux-3.2.3.tar.gz
+
+	wget https://cis.uni-muenchen.de/~schmid/tools/TreeTagger/data/tagger-scripts.tar.gz
+	tar -xzf tagger-scripts.tar.gz
+
+	wget https://cis.uni-muenchen.de/~schmid/tools/TreeTagger/data/install-tagger.sh
+	bash install-tagger.sh
+
+	cd lib/
+	wget https://cis.uni-muenchen.de/~schmid/tools/TreeTagger/data/french.par.gz
+	gunzip french.par.gz
+
 
 
 ## Usage
